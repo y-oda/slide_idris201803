@@ -23,7 +23,7 @@ Yohei Oda
 #### What's idris?
 
 - Functional Programming language
-  - Haskell based grammer
+  - Haskell based syntax
   - a little bit different...
     - default eager evaluation
     - Type annotation `:` , Cons `::`
@@ -193,6 +193,7 @@ Compile error 😭
 
 - Compiler cannot gurantee the behavior of `n==m`
 - We must show the equality of these values for compiler
+- (We can use build-in data types and functions for it but first we create them by ourselves for study)
 
 ---
 
@@ -280,6 +281,7 @@ checkEqNat' (S k) (S j) = case checkEqNat' k j of
                              (Just proof) => Just (cong proof)
 ```
 
+- rewrite checkEqNat with built-in data types and functions of Idris
 - `num1 = num2` is general version of `EqNat num1 num2`
 - cong is general version of `sameS`
 - Actually Idris can express stronger decidability than this(but no time...) 
